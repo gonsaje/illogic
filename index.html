@@ -4,11 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.6.1/Tone.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-a11y="true"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Monoton&family=Righteous&display=swap">
+    <link rel="stylesheet" href="./src/styles/reset.scss" />
+    <!-- <link rel="stylesheet" href="./src/styles/index.scss" /> -->
     <link rel="stylesheet" href="./dist/main.css" />
-    <title>Document</title>
+    <title>illogic.</title>
   </head>
 
   <body>
+    <div class="illogic-header">illogic.
+      <i class="far fa-moon"></i>
+      <div class="info-bar">
+        <i class="far fa-question-circle"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </div>
+    <script type="text/javascript">
+     let audioCtx = new AudioContext();
+      let osc = audioCtx.createOscillator();
+      let filter = audCtx.createBiquadFilter()
+      osc.connect(audioCtx.destination);
+      osc.start();
+      setTimeout(function(){
+        osc.stop();
+      }, 200);
+    </script>
+    <script type="text/javascript">
+       let kick1 = new Audio("./sounds/808/kick1.wav");
+        let rimshot = new Audio("./sounds/808/rimshot.wav");
+        let clap = new Audio("./sounds/808/handclap.wav");
+        let snare = new Audio("./sounds/808/snare.wav");
+        let cl_hihat = new Audio("./sounds/808/cl_hihat.wav");
+        let open_hihat = new Audio("./sounds/808/open_hh.wav");
+        let crash = new Audio("./sounds/808/crashcym.wav");
+        let tom = new Audio("./sounds/808/tom1.wav");
+        let hightom = new Audio("./sounds/808/hightom.wav");
+        let conga = new Audio("./sounds/808/conga1.wav");
+        let hi_conga = new Audio("./sounds/808/hi_conga.wav");
+        let claves = new Audio("./sounds/808/claves.wav");
+        let cowbell = new Audio("./sounds/808/cowbell.wav");
+        let maracas = new Audio("./sounds/808/maracas.wav");
+        let kick2 = new Audio("./sounds/808/kick2.wav");
+
+    </script>
+    <script type="text/javascript" src="./src/scripts/drumkit.js"></script>
+    <div>
+      <div class='drum'>808 Basic <i class="fas fa-drum"></i></div>
+      <div>
+        <button>Kick</button>
+        <button>Kick 2</button>
+        <button>Rimshot</button>
+        <button>Clap</button>
+        <button>Snare</button>
+        <button>Hi-Hat</button>
+        <button>Open Hi-Hat</button>
+        <button>Crash</button>
+        <button>Tom</button>
+        <button>Hi-Tom</button>
+        <button>Conga</button>
+        <button>Hi-Conga</button>
+        <button>Claves</button>
+        <button>Cowbell</button>
+        <button>Maracas</button>
+      </div>
+    </div>
     <script src="./dist/main.js"></script>
   </body>
 </html>

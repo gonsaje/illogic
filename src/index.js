@@ -1,1 +1,11 @@
-import "/src/styles/index.scss";
+import "./styles/index.scss";
+import Drums from './scripts/drumkit';
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+});
+
+
+

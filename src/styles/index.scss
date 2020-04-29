@@ -1,0 +1,61 @@
+html{
+  background-color: rgb(48, 41, 70);
+}
+
+
+.illogic-header{
+  display: flex;
+  margin: 5px;
+  margin-left: 10px;
+  font-size:50px;
+  font-family: "Fredoka One";
+  color: #aa9efa;
+ text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.info-bar{
+  font-size: 30px;
+}
+
+.info-bar > svg{
+  margin-left: 10px;
+}
+
+button {
+  border: none;
+  font-family: "Righteous";
+  color: white;
+  width: 80px;
+  height: 80px;
+  background-color: #aa9efa;
+  box-shadow:  2px 2px 2px 2px rgb(87, 4, 255);
+  border-radius: 4px;
+  margin-left: 10px;
+}
+button:focus{
+  outline: none;
+ 
+}
+
+.fa-moon{
+  text-shadow: 3px 3px 4px rgb(87, 4, 255);
+  text-shadow: 3px 3px 4px rgb(87, 4, 255);
+  font-size: 30px;
+  border-radius: 40px;
+  background-color: rgba(88, 4, 255, 0.741);
+  box-shadow:  0px 0px 20px 12px rgba(88, 4, 255, 0.837);
+}
+
+.fa-sun{
+  border-radius: 40px;
+  background-color: rgba(88, 4, 255, 0.83);
+  box-shadow:  0px 0px 20px 12px rgb(87, 4, 255);
+}
+
+.drum{
+  color: white;
+  text-orientation: upright;
+}

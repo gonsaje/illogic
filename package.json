@@ -14,7 +14,7 @@
     "webpack:watch": "webpack --watch --config webpack.dev.js",
     "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
   },
-  "author": "",
+  "author": "Jae Song",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -35,5 +35,8 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "tone": "^13.8.25"
   }
 }
