@@ -16,7 +16,7 @@
 
 ## 3. Wireframes
 
-![](src/images/js_wireframe.jpg)
+![](src/images/wireframe.png)
 
 ## 4. Technologies
       * Tone.js
