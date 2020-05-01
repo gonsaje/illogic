@@ -10,9 +10,9 @@ html{
   font-size:50px;
   font-family: "Fredoka One";
   color: #aa9efa;
-  text-shadow: 3px 3px 7px rgb(87, 4, 255);
   align-items: center;
   justify-content: space-between;
+  text-shadow: 3px 3px 7px rgb(87, 4, 255);
   filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
 }
 
@@ -70,6 +70,8 @@ button:focus{
 .info{
   
 }
+
+
 .fa-dice{
   text-shadow: 3px 3px 4px rgb(87, 4, 255);
   text-shadow: 3px 3px 4px rgb(87, 4, 255);
@@ -116,8 +118,8 @@ button:focus{
   margin:auto;
   margin-top: 20px;
   border-radius: 15px;
-  box-shadow:  0px 0px 20px 12px rgba(88, 4, 255, 0.837);
   margin-bottom: 20px;
+  box-shadow:  0px 0px 20px 12px rgba(88, 4, 255, 0.837);
   filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
   animation: border-flicker 6s linear infinite;
 }
@@ -160,4 +162,161 @@ button:focus{
     -moz-box-shadow: 0px 0px 78px 4px rgba(81, 16, 232, 0.73);
     box-shadow: 0px 0px 78px 4px rgba(124, 16, 232, 0.73);
   }
+}
+
+.title{
+  display:flex;
+  flex-direction:row ;
+}
+.ill{
+  animation: letter-flicker 3s linear infinite;
+}
+.info-header{
+  animation: letter-flicker 4s linear infinite;
+}
+
+@keyframes letter-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 3px 3px 7px #5704ff
+  }
+  2% {
+    opacity:0.1;
+   text-shadow: 3px 3px 7px rgb(87, 4, 255)
+  }
+  4% {
+    opacity:1;
+    text-shadow: 3px 3px 7px rgb(87, 4, 255)
+  }
+  
+  
+  19% {
+    opacity:1;
+    text-shadow: 3px 3px 7px rgb(87, 4, 255)
+  }
+  21% {
+    opacity:0.1;
+    text-shadow: 3px 3px 7px rgb(87, 4, 255)
+  }
+  23% {
+    opacity:1;
+    text-shadow: 3px 3px 7px rgb(87, 4, 255)
+  }
+  
+  80% {
+    opacity:1;
+    text-shadow: 3px 3px 7px rgb(87, 4, 255)
+  }
+  83% {
+    opacity:0.4;
+    text-shadow: 3px 3px 7px rgb(87, 4, 255)
+  }
+  87% {
+    opacity:1;
+    text-shadow: 3px 3px 7px rgb(87, 4, 255)
+  }
+}
+
+#modal{
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modal-child{
+  background-color: rgb(48, 41, 70);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border: 3px solid #aa9efa;
+  border-radius: 15px;
+ 
+  box-shadow:  0px 0px 20px 12px rgba(88, 4, 255, 0.837);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+  font-family:"Fredoka One";
+}
+
+.modal-content{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  color:#aa9efa;
+}
+
+.modal-content > h1{
+  text-shadow: 3px 3px 7px rgb(87, 4, 255);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+}
+
+.plugin-container{
+  display:flex;
+  align-items: center;
+}
+.play-pause{
+  margin-left:50px;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.play, .pause{
+  font-size: 50px;
+}
+
+.sequencer-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.sequencer{
+  display: flex;
+  width:80%;
+  height: 80%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.note{
+  display:flex;
+  justify-content: space-around;
+  width:100%;
+}
+
+input[type=checkbox] {
+  border-radius: 3px;
+}
+
+input[type=checkbox]:before {
+  content: "";
+  display:flex;
+ 
+        
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  border: 2px solid rgb(87, 4, 255);
+  border-radius: 3px;
+  background-color: #aa9efa;
+}
+input[type=checkbox]:checked:after {
+  content: "";
+  display:block;
+  width: 60px;
+  height: 60px;
+  border: solid rgba(0, 0, 0, 0);
+  border-width: 0 2px 2px 0;
+  background-color: #7b67f9;
+  
+         
 }

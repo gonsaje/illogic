@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.6.1/Tone.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.6.1/Tone.js"></script> -->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-a11y="true"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Monoton&family=Righteous&display=swap">
     <link rel="stylesheet" href="./src/styles/reset.scss" />
@@ -14,72 +14,88 @@
   </head>
 
   <body>
+    <div id="modal" style="display:none">
+      <div id="modal-child" style="display: none;">
+        <div class="modal-content">
+        <h1 class="info-header">info.</h1> 
+        <h2>sequencer</h2>
+        <p>a sequencer can record, edit, or play back music, by handling note and performance information in several forms, typically CV/Gate, MIDI, or Open Sound
+        Control (OSC), and possibly audio and automation data for DAWs and plug-ins.</p>
+        </div>
+      </div>
+    </div>
     <div class="nav-container">
-      <div>illogic.</div> 
+      <div class="title"><div class="ill">ill</div>ogic.</div> 
       <i class="far fa-moon"></i>
       <div class="info-bar">
-        <button class="info"><i class="far fa-question-circle"></i></button>
-        <button class="info"><i class="fab fa-github"></i></button>
-        <button class="info"><i class="fab fa-linkedin"></i></button>
-        
+        <button class="info" id="more-info"><i class="far fa-question-circle"></i></button>
+        <button class="info" onclick="window.location.href = 'https://github.com/gonsaje'"><i class="fab fa-github"></i></button>
+        <button class="info" onclick="window.location.href = 'https://www.linkedin.com/in/jaesong2/'"><i class="fab fa-linkedin"></i></button>
+         <button class="info" onclick="window.location.href = 'https://www.linkedin.com/in/jaesong2/'"><i class="fas fa-user-astronaut"></i></i></button>
       </div>
     </div>
     <div class="sequencer-container">
-
-    </div>
-    <div class="plugin-container">
-
-    </div>
-    <!-- <script type="text/javascript">
-     let audioCtx = new AudioContext();
-      let osc = audioCtx.createOscillator();
-      let filter = audCtx.createBiquadFilter()
-      osc.connect(audioCtx.destination);
-      osc.start();
-      setTimeout(function(){
-        osc.stop();
-      }, 200);
-    </script>
-    <script type="text/javascript">
-       let kick1 = new Audio("./sounds/808/kick1.wav");
-        let rimshot = new Audio("./sounds/808/rimshot.wav");
-        let clap = new Audio("./sounds/808/handclap.wav");
-        let snare = new Audio("./sounds/808/snare.wav");
-        let cl_hihat = new Audio("./sounds/808/cl_hihat.wav");
-        let open_hihat = new Audio("./sounds/808/open_hh.wav");
-        let crash = new Audio("./sounds/808/crashcym.wav");
-        let tom = new Audio("./sounds/808/tom1.wav");
-        let hightom = new Audio("./sounds/808/hightom.wav");
-        let conga = new Audio("./sounds/808/conga1.wav");
-        let hi_conga = new Audio("./sounds/808/hi_conga.wav");
-        let claves = new Audio("./sounds/808/claves.wav");
-        let cowbell = new Audio("./sounds/808/cowbell.wav");
-        let maracas = new Audio("./sounds/808/maracas.wav");
-        let kick2 = new Audio("./sounds/808/kick2.wav");
-
-    </script>
-    <script type="text/javascript" src="./src/scripts/drumkit.js"></script>
-    <div>
-      <div class='drum'>808 Basic <i class="fas fa-drum"></i></div>
-      <div>
-        <button class="music">Kick</button>
-        <button class="music">Kick 2</button>
-        <button class="music">Kick 2</button>
-        <button class="music">Rimshot</button>
-        <button class="music">Clap</button>
-        <button class="music">Snare</button>
-        <button class="music">Hi-Hat</button>
-        <button class="music">Open Hi-Hat</button>
-        <button class="music">Crash</button>
-        <button class="music">Tom</button>
-        <button class="music">Hi-Tom</button>
-        <button class="music">Conga</button>
-        <button class="music">Hi-Conga</button>
-        <button class="music">Claves</button>
-        <button class="music">Cowbell</button>
-        <button class="music">Maracas</button>
+      <div class="sequencer">
+        <div class="note">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+        </div>
+        <div class="note">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+        </div>
+        <div class="note">
+          <input class="step"type="checkbox">
+          <input class="step"type="checkbox">
+          <input class="step"type="checkbox">
+          <input class="step"type="checkbox">
+          <input class="step"type="checkbox">
+          <input class="step"type="checkbox">
+          <input class="step"type="checkbox">
+          <input class="step"type="checkbox">
+        </div>
+        <div class="note">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+        </div>
+        <div class="note">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+          <input class='step'type="checkbox">
+        </div>
       </div>
     </div>
-    <script src="./dist/main.js"></script> -->
+    <div class="plugin-container">
+      <div class="play-pause">
+        <button id="play" class="info play"><i class="far fa-play-circle"></i></button>
+        <button id="pause" class="info pause"><i class="far fa-pause-circle"></i></button>
+      </div>
+    </div>
+   
+    
+    <script src="./dist/main.js"></script> 
   </body>
 </html>
