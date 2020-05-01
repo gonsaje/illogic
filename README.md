@@ -1,8 +1,4 @@
-# music-synth / DAW 
-(name tbd)(digital audio workstation)
-
-* [QUESTION TO COACHES]: How realistic is it to create one of these in one week? https://tonejs.github.io/demos
-      * Is it more realistic to create a basic instrument or is something like this possible?
+# illogic
 
 ## 1. Background and Overview
       * A visually-stimulating, interactive musical environment. This project will showcase a combination of my previous and current passions
