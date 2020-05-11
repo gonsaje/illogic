@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
       let synth = synths[i];
       let note = notes[i];
       let $row = $rows[i];
+
+      
       let $input = $row.querySelector(`input:nth-child(${step + 1})`);
       if ($input.checked) {
         synth.triggerAttackRelease(note, '4n', time);
