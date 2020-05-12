@@ -1,6 +1,6 @@
 import "./styles/index.scss";
 import * as Tone from 'tone';
-// import Drums from './scripts/drumkit';
+
 
 
 
