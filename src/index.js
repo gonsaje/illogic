@@ -60,12 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
       let note = notes[i];
       let $row = $rows[i];
 
-      
+
       let $input = $row.querySelector(`input:nth-child(${step + 1})`);
       if ($input.checked) {
-        synth.triggerAttackRelease(note, '4n', time);
+        synth.triggerAttackRelease(note, '8n', time);
       }
     }
+    index++;
   }
 
 
