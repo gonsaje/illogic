@@ -271,16 +271,47 @@ button:focus{
 }
 
 .sequencer-container{
+  flex:1;
   display:flex;
   flex-direction:column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  overflow:auto;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  overscroll-behavior: auto contain;
+}
+
+::-webkit-scrollbar-track {
+  background:none;
+  border-radius: 10px;
+  padding-right: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aa9efa46 ;
+  border-radius: 10px;
+  padding-right: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aa9efa ;
+}
+
+::-webkit-scrollbar:hover {
+  box-shadow: 0px 0px 20px 12px rgba(88, 4, 255, 0.837);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+  opacity:100%;
+}
+
+
 .sequencer,.bass,.drum{
   display: flex;
   width:95%;
   height: 95%;
   align-items: center;
+  min-height:min-content;
 }
 .instrument-title{
   font-family:'Fredoka One';
@@ -306,17 +337,22 @@ button:focus{
 
 input[type=checkbox] {
   border-radius: 3px;
+  content: "";
+  display:flex;    
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  border: 2px solid rgb(87, 4, 255);
+  border-radius: 3px;
+  background-color: #aa9efa;
 }
 
 input[type=checkbox]:before {
-  content: "";
-  display:flex;
- 
-        
-  width: 60px;
-  height: 60px;
-  top: 0;
-  left: 0;
+  display:block;
+  background-color: #aa9efa;
+  width: 40px;
+  height: 40px;
   border: 2px solid rgb(87, 4, 255);
   border-radius: 3px;
   background-color: #aa9efa;
@@ -324,8 +360,8 @@ input[type=checkbox]:before {
 input[type=checkbox]:checked:after {
   content: "";
   display:block;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border: solid rgba(0, 0, 0, 0);
   border-width: 0 2px 2px 0;
   background-color: #7b67f9;
