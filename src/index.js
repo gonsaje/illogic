@@ -42,44 +42,44 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const synths = [
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth(),
-    new Tone.FMSynth()
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth(),
+    new Tone.PluckSynth()
   ];
 
-  synths[0].oscillator.type =
-    "sine";
-  synths[1].oscillator.type =
-    "sine";
-  synths[2].oscillator.type =
-    "sine";
-  synths[3].oscillator.type =
-    "sine";
-  synths[4].oscillator.type =
-    "sine";
-    synths[5].oscillator.type = "sine";
-    synths[6].oscillator.type = "sine";
-    synths[7].oscillator.type = "sine";
-    synths[8].oscillator.type = "sine";
-    synths[9].oscillator.type = "sine";
-    synths[10].oscillator.type = "sine";
-    synths[11].oscillator.type = "sine";
+  // synths[0].oscillator.type =
+  //   "sine";
+  // synths[1].oscillator.type =
+  //   "sine";
+  // synths[2].oscillator.type =
+  //   "sine";
+  // synths[3].oscillator.type =
+  //   "sine";
+  // synths[4].oscillator.type =
+  //   "sine";
+  //   synths[5].oscillator.type = "sine";
+  //   synths[6].oscillator.type = "sine";
+  //   synths[7].oscillator.type = "sine";
+  //   synths[8].oscillator.type = "sine";
+  //   synths[9].oscillator.type = "sine";
+  //   synths[10].oscillator.type = "sine";
+  //   synths[11].oscillator.type = "sine";
 
   const gain = new Tone.Gain(
     0.5
   );
   gain.toDestination();
   let notes = [
-    "C5","B4","A#4","A4","G4","F#4","F4","E4","D#4","D4","C#4","C4"
+    "C5","B4","A4","G4","F4","E4","D4","C4"
   ];
   //['C4', 'C#4', 'D4', 'D#4', 'E4', 'F4', 'F#4', 'G4', 'A4', 'A#4', 'B4', 'C5']
   synths.forEach((synth) =>
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   function repeat(time) {
-    let step = index % 16;
+    let step = index % 8;
     for (
       let i = 0;
       i < $rows.length;
