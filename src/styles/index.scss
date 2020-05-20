@@ -339,8 +339,8 @@ input[type=checkbox] {
   border-radius: 3px;
   content: "";
   display:flex;    
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   top: 0;
   left: 0;
   border: 2px solid rgb(87, 4, 255);
@@ -351,8 +351,8 @@ input[type=checkbox] {
 input[type=checkbox]:before {
   display:block;
   background-color: #aa9efa;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: 2px solid rgb(87, 4, 255);
   border-radius: 3px;
   background-color: #aa9efa;
@@ -360,8 +360,8 @@ input[type=checkbox]:before {
 input[type=checkbox]:checked:after {
   content: "";
   display:block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: solid rgba(0, 0, 0, 0);
   border-width: 0 2px 2px 0;
   background-color: #7b67f9;
