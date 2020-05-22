@@ -18,11 +18,15 @@
       * Tone.js
       * Javascript
       
-## 5.
-      * Day 1: File Skeleton/ Data Structure
-      * Day 2: Tonal Components
-      * Day 3: Different Instruments (Variations of Tonals)
-      * Day 4: Plugin Components (soundwave modifier)
-      * Day 5: Styling and Cleanup
+## 5. MVP List
+      * 1: File Skeleton/ Data Structure
+      * 2: Tonal Components
+      * 3: Playback Functionality
+      * 4: Plugin Components (soundwave modifier)
+      * 5: Styling and Cleanup
+      
+      Bonus/ Future Implementations:
+          * Different Instruments
+          
       
 
