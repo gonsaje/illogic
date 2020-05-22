@@ -16,7 +16,11 @@
 
 ## 4. Technologies
       Tone.js
-      Javascript
+      Web Audio API
+      JavaScript
+      CSS
+      HTML
+      
       
 ## 5. MVP List
       1: File Skeleton/ Data Structure
