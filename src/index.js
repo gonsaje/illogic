@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const gain = new Tone.Gain(0.1);
   gain.toDestination();
+  const reverb = new Tone.Reverb({"decay": 5});
+  reverb.toDestination();
 
   let notes = ["C5","B4","A4","G4","F4","E4","D4","C4"]; //['C4', 'C#4', 'D4', 'D#4', 'E4', 'F4', 'F#4', 'G4', 'A4', 'A#4', 'B4', 'C5']
   synths.forEach((synth) => synth.toDestination());
@@ -102,10 +104,11 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   const wavetype = document.getElementById("wavetype");
+  let waveval = wavetype.options[wavetype.selectedIndex].value
 
   wavetype.addEventListener("change", () => {
     synths.forEach(synth => {
-      synth.oscillator
+      synth.oscillator.type = waveval;
     })
   })
 
