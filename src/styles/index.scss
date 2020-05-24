@@ -368,6 +368,13 @@ input[type=checkbox]:checked:after {
 }
 
 #wavetype{
-  height: 10px;
-  width: 10px;
+  background-color: #aa9efa;
+  color: rgb(87, 4, 255);
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin :10px;
+  font-family: "Fredoka One";
+  text-align: center;
 }
