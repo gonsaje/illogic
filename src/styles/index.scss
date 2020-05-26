@@ -371,10 +371,44 @@ input[type=checkbox]:checked:after {
   background-color: #aa9efa;
   color: rgb(87, 4, 255);
   height: 40px;
-  width: 100px;
+  width: 150px;
   border-radius: 20px;
   font-size: 15px;
-  margin :10px;
+  margin :5px;
   font-family: "Fredoka One";
-  text-align: center;
+}
+
+.label{
+  font-family: "Fredoka One";
+  text-shadow: 3px 3px 7px rgb(87, 4, 255);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+  color: #aa9efa;
+}
+
+.wavetype{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 3px 3px 7px rgb(87, 4, 255);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+}
+.volume{
+  font-size: 50px;
+  display: flex;
+  height:100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.plugins{
+  width:100%;
+  height:60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.vol-up,.vol-down,.mute{
+  font-size:40px;
 }

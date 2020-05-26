@@ -20,8 +20,7 @@
         <div class="modal-content">
         <h1 class="info-header">info.</h1> 
         <h2>sequencer</h2>
-        <p>a sequencer can record, edit, or play back music, by handling note and performance information in several forms, typically CV/Gate, MIDI, or Open Sound
-        Control (OSC), and possibly audio and automation data for DAWs and plug-ins.</p>
+        <p>Program your notes by mapping out a pattern using the squares. Once you are ready to hear what you made, click play! Try it out for yourself!</p>
         </div>
       </div>
     </div>
@@ -261,14 +260,23 @@
         <button id="play" class="info play"><i class="far fa-play-circle"></i></button>
         <button id="pause" class="info pause"><i class="far fa-pause-circle"></i></button>
       </div>
-      <div>  
-        <div>
-          <label for="wavetype">wavetype:</label>
+      <div class="plugins"> 
+        <div class = "volume">
+          <button id="vol-up" class="info vol-up"><i class="fas fa-volume-up"></i></button>
+          <button id="vol-down" class="info vol-down"><i class="fas fa-volume-down"></i></button>
+          <button id="mute" class="info mute" ><i class="fas fa-volume-mute"></i></button>
+        </div> 
+        <div class="wavetype">
+          <label class="label"for="wavetype">wavetype:</label>
           <select id="wavetype">
             <option value="sine">sine.</option>
             <option value="sawtooth">sawtooth.</option>
             <option value="square">square.</option>
           </select>
+        </div>
+        
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         </div>
       </div>
     </div>

@@ -112,4 +112,20 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
+  const vol_up= document.getElementById("vol-up");
+  const vol_down= document.getElementById("vol-down");
+  const mute = document.getElementById("mute");
+
+  
+
+  mute.addEventListener("click", () => {
+    if (Tone.Master.mute === false) {
+      Tone.Master.mute = true;
+    } else {
+      Tone.Master.mute = false;
+    }
+  });
+
+
+
 });
