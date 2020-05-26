@@ -67,9 +67,7 @@ button:focus{
   background-color: rgba(88, 4, 255, 0.741);
   box-shadow:  0px 0px 20px 12px rgba(88, 4, 255, 0.837);
 }
-.info{
-  
-}
+
 
 
 .fa-dice{
@@ -273,18 +271,63 @@ button:focus{
 }
 
 .sequencer-container{
+  flex:1;
   display:flex;
+  flex-direction:column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  overflow:auto;
 }
-.sequencer{
+::-webkit-scrollbar {
+  width: 10px;
+  overscroll-behavior: auto contain;
+}
+
+::-webkit-scrollbar-track {
+  background:none;
+  border-radius: 10px;
+  padding-right: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aa9efa46 ;
+  border-radius: 10px;
+  padding-right: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aa9efa ;
+}
+
+::-webkit-scrollbar:hover {
+  box-shadow: 0px 0px 20px 12px rgba(88, 4, 255, 0.837);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+  opacity:100%;
+}
+
+
+.sequencer,.bass,.drum{
   display: flex;
-  width:80%;
-  height: 80%;
-  flex-direction: column;
-  justify-content: space-around;
+  width:95%;
+  height: 95%;
   align-items: center;
-  
+  min-height:min-content;
+}
+.instrument-title{
+  font-family:'Fredoka One';
+  color:#aa9efa;
+  font-size:20px;
+  padding:10px;
+  text-shadow: 3px 3px 7px rgb(87, 4, 255);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+}
+.instrument-name{
+  display:flex;
+  align-items:center;
+  text-align: center;
+  padding-right: 75px;
+  margin-right:10px;
+  border-right: 3px solid #aa9efa ;
 }
 .note{
   display:flex;
@@ -294,17 +337,22 @@ button:focus{
 
 input[type=checkbox] {
   border-radius: 3px;
+  content: "";
+  display:flex;    
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border: 2px solid rgb(87, 4, 255);
+  border-radius: 3px;
+  background-color: #aa9efa;
 }
 
 input[type=checkbox]:before {
-  content: "";
-  display:flex;
- 
-        
-  width: 60px;
-  height: 60px;
-  top: 0;
-  left: 0;
+  display:block;
+  background-color: #aa9efa;
+  width: 50px;
+  height: 50px;
   border: 2px solid rgb(87, 4, 255);
   border-radius: 3px;
   background-color: #aa9efa;
@@ -312,11 +360,55 @@ input[type=checkbox]:before {
 input[type=checkbox]:checked:after {
   content: "";
   display:block;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border: solid rgba(0, 0, 0, 0);
   border-width: 0 2px 2px 0;
   background-color: #7b67f9;
-  
-         
+}
+
+#wavetype{
+  background-color: #aa9efa;
+  color: rgb(87, 4, 255);
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin :5px;
+  font-family: "Fredoka One";
+}
+
+.label{
+  font-family: "Fredoka One";
+  text-shadow: 3px 3px 7px rgb(87, 4, 255);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+  color: #aa9efa;
+}
+
+.wavetype{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 3px 3px 7px rgb(87, 4, 255);
+  filter: drop-shadow(0px 0px 10px rgb(87, 4, 255));
+}
+.volume{
+  font-size: 50px;
+  display: flex;
+  height:100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.plugins{
+  width:100%;
+  height:60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.vol-up,.vol-down,.mute{
+  font-size:40px;
 }
