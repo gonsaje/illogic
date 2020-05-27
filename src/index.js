@@ -4,41 +4,22 @@ import regeneratorRuntime from "regenerator-runtime";
 
 
 document.addEventListener("DOMContentLoaded", () => {
- // const play = document.body.querySelector(".play");
-// const pause = document.getElementById("pause");
-
-  const info = document.getElementById(
-    "more-info"
-  );
-  const modal = document.getElementById(
-    "modal"
-  );
-  const modalChild = document.getElementById(
-    "modal-child"
-  );
-  info.addEventListener(
-    "click",
-    openModal
-  );
-  modal.addEventListener(
-    "click",
-    closeModal
-  );
+  const info = document.getElementById("more-info");
+  const modal = document.getElementById( "modal");
+  const modalChild = document.getElementById("modal-child");
+  info.addEventListener("click",openModal);
+  modal.addEventListener("click",closeModal);
 
   function openModal(e) {
     e.preventDefault();
-    modal.style.display =
-      "block";
-    modalChild.style.display =
-      "block";
+    modal.style.display="block";
+    modalChild.style.display="block";
   }
 
   function closeModal(e) {
     e.preventDefault();
-    modal.style.display =
-      "none";
-    modalChild.style.display =
-      "none";
+    modal.style.display="none";
+    modalChild.style.display="none";
   }
 
   const synths = [
@@ -97,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
       await Tone.Transport.start();
     }
   );
-
   pause.addEventListener( "click", async () => {
       await Tone.Transport.stop();
     }
@@ -112,19 +92,20 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  const vol_up= document.getElementById("vol-up");
-  const vol_down= document.getElementById("vol-down");
-  const mute = document.getElementById("mute");
+
+  // const vol_up= document.getElementById("vol-up");
+  // const vol_down= document.getElementById("vol-down");
+  // const mute = document.getElementById("mute");
 
   
 
-  mute.addEventListener("click", () => {
-    if (Tone.Master.mute === false) {
-      Tone.Master.mute = true;
-    } else {
-      Tone.Master.mute = false;
-    }
-  });
+  // mute.addEventListener("click", () => {
+  //   if (Tone.Master.mute === false) {
+  //     Tone.toMaster.mute = true;
+  //   } else {
+  //     Tone.toMaster.mute = false;
+  //   }
+  // });
 
 
 
