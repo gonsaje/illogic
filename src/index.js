@@ -33,23 +33,25 @@ document.addEventListener("DOMContentLoaded", () => {
     new Tone.FMSynth(),
   ];
 
-  synths[0].oscillator.type = "sine";
-  synths[1].oscillator.type = "sine";
-  synths[2].oscillator.type = "sine";
-  synths[3].oscillator.type = "sine";
-  synths[4].oscillator.type = "sine";
-  synths[5].oscillator.type = "sine";
-  synths[6].oscillator.type = "sine";
-  synths[7].oscillator.type = "sine";
+  synths[0].oscillator.type = "sawtooth";
+  synths[1].oscillator.type = "sawtooth";
+  synths[2].oscillator.type = "sawtooth";
+  synths[3].oscillator.type = "sawtooth";
+  synths[4].oscillator.type = "sawtooth";
+  synths[5].oscillator.type = "sawtooth";
+  synths[6].oscillator.type = "sawtooth";
+  synths[7].oscillator.type = "sawtooth";
+
+  // synths.forEach(synth => {
+  //   synth.oscillator.type = "sine"
+  // })
   
   const gain = new Tone.Gain(0.1);
   gain.toDestination();
-  const reverb = new Tone.Reverb({"decay": 5});
-  reverb.toDestination();
 
-  let notes = ["C5","B4","A4","G4","F4","E4","D4","C4"]; //['C4', 'C#4', 'D4', 'D#4', 'E4', 'F4', 'F#4', 'G4', 'A4', 'A#4', 'B4', 'C5']
+  let notes = ["C5","B4","A4","G4","F4","E4","D4","C4"]; 
   synths.forEach((synth) => synth.toDestination());
-  const $rows = document.body.querySelectorAll(".note"); //array of note divs
+  const $rows = document.body.querySelectorAll(".note"); 
   let index = 0;
   Tone.Transport.scheduleRepeat(repeat, "8n");
 
@@ -82,16 +84,24 @@ document.addEventListener("DOMContentLoaded", () => {
       await Tone.Transport.stop();
     }
   );
-
+// debugger
   const wavetype = document.getElementById("wavetype");
-  let waveval = wavetype.options[wavetype.selectedIndex].value
-
-  wavetype.addEventListener("change", () => {
-    synths.forEach(synth => {
-      synth.oscillator.type = waveval;
-    })
-  })
-
+  const wavebtn = document.getElementById("wave-change");
+  let waveval = wavetype.options[wavetype.selectedIndex].attributes.value
+  
+  console.log(waveval);
+  function changeWave(waveval) {
+    synths[0].oscillator.type = waveval;
+    synths[1].oscillator.type = waveval;
+    synths[2].oscillator.type = waveval;
+    synths[3].oscillator.type = waveval;
+    synths[4].oscillator.type = waveval;
+    synths[5].oscillator.type = waveval;
+    synths[6].oscillator.type = waveval;
+    synths[7].oscillator.type = waveval;
+  }
+  
+  wavebtn.addEventListener("click", changeWave(waveval));
 
   // const vol_up= document.getElementById("vol-up");
   // const vol_down= document.getElementById("vol-down");
