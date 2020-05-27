@@ -1,3 +1,5 @@
+![illogic_logo](src/images/favicon.png)
+
 # illogic
 
 ## 1. Background and Overview
@@ -21,25 +23,28 @@
       CSS
       HTML
       
-<<<<<<< HEAD
-## 5. MVP List
-      * Day 1: File Skeleton/ Data Structure
-      * Day 2: Tonal Components
-      * Day 3: Different Instruments
-      * Day 4: Plugin Components 
-      * Day 5: Styling and Cleanup
-=======
+
       
 ## 5. MVP List
       1: File Skeleton/ Data Structure
+
       2: Tonal Components
+
+      Synths are linked to an array of notes and are triggered based on the "selected" attribute.
+
+![](src/images/tonal.png)
+
       3: Playback Functionality
+
+      Play and pause are triggered using asynchronous functions.
+![](src/images/playback.png)
+
       4: Plugin Components (soundwave modifier)
+
       5: Styling and Cleanup
       
-      * Bonus/ Future Implementations:
+      * Future Implementations:
           Different Instruments
           
->>>>>>> master
       
 
