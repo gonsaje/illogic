@@ -426,3 +426,17 @@ input[type=checkbox]:checked:after {
 .info-header{
   font-size: 45px;
 }
+
+#wave-change{
+  font-family: "Fredoka One";
+  background-color: rgba(88, 4, 255, 0);
+  color: #aa9efa;
+  border: 4px solid rgb(87, 4, 255);
+  border-radius: 10px;
+}
+
+#wave-change:hover{
+  cursor: pointer;
+  color: #aa9efa83;
+  border: 4px solid #5804ff9c ;
+}

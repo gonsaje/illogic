@@ -84,13 +84,14 @@ document.addEventListener("DOMContentLoaded", () => {
       await Tone.Transport.stop();
     }
   );
-// debugger
   const wavetype = document.getElementById("wavetype");
+debugger
   const wavebtn = document.getElementById("wave-change");
-  let waveval = wavetype.options[wavetype.selectedIndex].attributes.value
-  
+  let waveval = wavetype.options[wavetype.selectedIndex].value;
+
   console.log(waveval);
   function changeWave(waveval) {
+    debugger
     synths[0].oscillator.type = waveval;
     synths[1].oscillator.type = waveval;
     synths[2].oscillator.type = waveval;
@@ -101,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     synths[7].oscillator.type = waveval;
   }
   
-  wavebtn.addEventListener("click", changeWave(waveval));
+  wavebtn.addEventListener("click", () => {changeWave(waveval)});
 
   // const vol_up= document.getElementById("vol-up");
   // const vol_down= document.getElementById("vol-down");
