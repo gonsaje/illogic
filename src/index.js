@@ -85,13 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
   const wavetype = document.getElementById("wavetype");
-debugger
   const wavebtn = document.getElementById("wave-change");
   let waveval = wavetype.options[wavetype.selectedIndex].value;
+  wavetype.onchange = function() {
+    waveval = wavetype.options[wavetype.selectedIndex].value;
+  }
 
   console.log(waveval);
   function changeWave(waveval) {
-    debugger
     synths[0].oscillator.type = waveval;
     synths[1].oscillator.type = waveval;
     synths[2].oscillator.type = waveval;
