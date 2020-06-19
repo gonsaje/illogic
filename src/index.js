@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
     new Tone.FMSynth(),
   ];
 
-  synths[0].oscillator.type = "sawtooth";
-  synths[1].oscillator.type = "sawtooth";
-  synths[2].oscillator.type = "sawtooth";
-  synths[3].oscillator.type = "sawtooth";
-  synths[4].oscillator.type = "sawtooth";
-  synths[5].oscillator.type = "sawtooth";
-  synths[6].oscillator.type = "sawtooth";
-  synths[7].oscillator.type = "sawtooth";
+  synths[0].oscillator.type = "sine";
+  synths[1].oscillator.type = "sine";
+  synths[2].oscillator.type = "sine";
+  synths[3].oscillator.type = "sine";
+  synths[4].oscillator.type = "sine";
+  synths[5].oscillator.type = "sine";
+  synths[6].oscillator.type = "sine";
+  synths[7].oscillator.type = "sine";
 
   // synths.forEach(synth => {
   //   synth.oscillator.type = "sine"
@@ -91,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     waveval = wavetype.options[wavetype.selectedIndex].value;
   }
 
-  console.log(waveval);
   function changeWave(waveval) {
     synths[0].oscillator.type = waveval;
     synths[1].oscillator.type = waveval;
