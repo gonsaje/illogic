@@ -10,9 +10,9 @@ A visually-stimulating, interactive musical environment. This project will showc
 
 
 ## Functionality & MVP's
-      Users will be able to interact with the app and receive tonal feedback.
-      Choose different instruments
-      Manipulate the shape of the sound
+* Users will be able to interact with the app and receive tonal feedback.
+* Choose different instruments
+* Manipulate the shape of the sound
 
 
 ## Wireframe
@@ -34,7 +34,7 @@ A visually-stimulating, interactive musical environment. This project will showc
 
 ### 2: Tonal Components
 
-Synths are linked to an array of notes and are triggered based on the "selected" attribute.
+Synths are linked to an array of notes and are triggered based on the "selected" attribute. Once "play" is triggered, the loop will proceed to playback continuously.
 
 ```JavaScript
 let notes = ["C5","B4","A4","G4","F4","E4","D4","C4"]; 
@@ -82,6 +82,8 @@ const pause = document.getElementById( "pause");
 
 ### 4: Plugin Components (soundwave modifier)
 
+The shape of the oscillator's soundwave is changed by a simple dropdown menu. There are three available options: Sine, Sawtooth, and Square. 
+
 ```JavaScript
  const wavetype = document.getElementById("wavetype");
  const wavebtn = document.getElementById("wave-change");
@@ -105,6 +107,8 @@ const pause = document.getElementById( "pause");
 ```
 
 ### 5: Styling and Cleanup
+
+By using keyframes, the opacity of the border and box shadow are manipulated to give a flickering effect. Different boxes were given different run times to provide a more independent effect.
 
 ```CSS
 @keyframes border-flicker {
