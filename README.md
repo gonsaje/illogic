@@ -8,6 +8,7 @@ A visually-stimulating, interactive musical environment. This project will showc
 
 [Live Link](https://gonsaje.github.io/illogic/)
 
+![](src/images/illogic2.gif)
 
 ## Functionality & MVP's
 * Users will be able to interact with the app and receive tonal feedback.
@@ -83,6 +84,8 @@ const pause = document.getElementById( "pause");
 ### 4: Plugin Components (soundwave modifier)
 
 The shape of the oscillator's soundwave is changed by a simple dropdown menu. There are three available options: Sine, Sawtooth, and Square. 
+
+![](src/images/wavechange.gif)
 
 ```JavaScript
  const wavetype = document.getElementById("wavetype");
